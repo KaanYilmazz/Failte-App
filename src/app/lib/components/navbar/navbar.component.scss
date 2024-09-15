@@ -1,0 +1,45 @@
+/* Toolbar settings */
+.navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Logo container styling */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Logo styling */
+  .logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  /* Fills the space between logo and menu items */
+  .spacer {
+    flex: 1;
+  }
+  
+  /* Navigation links (hidden on small screens) */
+  .nav-links {
+    display: none;
+  }
+  
+  /* Show navigation links on medium and larger screens */
+  @media (min-width: 768px) {
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .menu-icon {
+      display: none;
+    }
+  }
+  
+  /* Menu icon for small screens (hidden on larger screens) */
+  .menu-icon {
+    display: block;
+  }
+  

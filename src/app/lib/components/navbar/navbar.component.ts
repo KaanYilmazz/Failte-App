@@ -9,6 +9,7 @@ import { LogoComponent } from '../logo/logo.component';
     standalone: true,
     imports: [CommonModule, RouterModule, LogoComponent],
     templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
