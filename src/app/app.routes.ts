@@ -13,13 +13,33 @@ export const routes: Routes = [
         canMatch: [authGuard()],
     },
     {
-        path: 'users/:username',
-        loadChildren: async () => (await import('@pages/user')).routes,
+        path: 'faq',
+        loadChildren: async () => (await import('@pages/faq')).routes,
         canMatch: [authGuard()],
     },
     {
-        path: 'settings',
-        loadChildren: async () => (await import('@pages/settings')).routes,
+        path: 'account',
+        loadChildren: async () => (await import('@pages/account')).routes,
+        canMatch: [authGuard()],
+    },
+    {
+        path: 'job/:jobId',
+        loadChildren: async () => (await import('@pages/jobs')).routes,
+        canMatch: [authGuard()],
+    },
+    {
+        path: 'room/:roomId',
+        loadChildren: async () => (await import('@pages/home')).routes,
+        canMatch: [authGuard()],
+    },
+    {
+        path: 'jobs',
+        loadChildren: async () => (await import('@pages/jobs')).routes,
+        canMatch: [authGuard()],
+    },
+    {
+        path: 'rooms',
+        loadChildren: async () => (await import('@pages/home')).routes,
         canMatch: [authGuard()],
     },
     {
