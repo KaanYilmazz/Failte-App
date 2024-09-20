@@ -5,6 +5,7 @@ import { AuthService } from '@lib/services';
 import { ThemeService } from '@lib/services/theme';
 import { LayoutHorizontalComponent } from './lib/components/layouts/layout-horizontal/layout-horizontal.component';
 
+
 @Component({
     selector: 'app-root',
     standalone: true,
