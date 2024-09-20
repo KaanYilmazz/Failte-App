@@ -3,13 +3,14 @@ import { Component, inject, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '@lib/services';
 import { ThemeService } from '@lib/services/theme';
+import { NgxSpinnerModule } from "ngx-spinner";
 import { ToastrService } from 'ngx-toastr';
 import { LayoutHorizontalComponent } from './lib/components/layouts/layout-horizontal/layout-horizontal.component';
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [CommonModule, RouterModule, LayoutHorizontalComponent],
+    imports: [CommonModule, RouterModule, LayoutHorizontalComponent, NgxSpinnerModule],
     templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
@@ -27,5 +28,7 @@ export class AppComponent implements OnInit {
 
 
         this.toastr.success('Hello world!', 'Toastr fun!');
+       
     }
+    
 }
