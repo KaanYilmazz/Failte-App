@@ -3,8 +3,8 @@ import { Component, inject, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '@lib/services';
 import { ThemeService } from '@lib/services/theme';
+import { ToastrService } from 'ngx-toastr';
 import { LayoutHorizontalComponent } from './lib/components/layouts/layout-horizontal/layout-horizontal.component';
-
 
 @Component({
     selector: 'app-root',
@@ -19,5 +19,13 @@ export class AppComponent implements OnInit {
 
     ngOnInit(): void {
         this._themeService.init();
+    }
+    /**
+     *
+     */
+    constructor(private toastr: ToastrService) {
+
+
+        this.toastr.success('Hello world!', 'Toastr fun!');
     }
 }
